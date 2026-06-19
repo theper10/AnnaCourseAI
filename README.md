@@ -13,6 +13,12 @@ Lösningen följer beslutsunderlaget: den använder ett enkelt RAG-upplägg, mar
 - `docs/inlamning-2-owasp-reflektion.md` - säkerhetsanalys och kritisk reflektion.
 - `docs/Inlamning-2-Theodore-Perlman.pdf` - PDF för inlämning.
 
+## Krav
+
+- .NET SDK 8 eller nyare
+- PowerShell
+- n8n är valfritt, eftersom samma automation även finns som PowerShell-script
+
 ## Kör backend
 
 ```powershell
@@ -38,7 +44,7 @@ powershell -ExecutionPolicy Bypass -File .\run-local-demo.ps1
 Starta backend enligt ovan. Kör sedan:
 
 ```powershell
-.\automation\run-demo-automation.ps1
+powershell -ExecutionPolicy Bypass -File .\automation\run-demo-automation.ps1
 ```
 
 Automationen skickar en studentfråga till endpointen `/api/automation/student-question`. Backend söker i kursmaterialet, maskerar e-post/persondata, upptäcker prompt injection och returnerar ett AI-förslag som kräver lärargranskning.

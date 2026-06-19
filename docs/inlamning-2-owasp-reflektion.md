@@ -59,7 +59,7 @@ Flödet är:
 5. AI-delen skapar ett svarsförslag.
 6. Svaret returneras med varningar, källor och krav på lärargranskning.
 
-I demofrågan finns en prompt injection: "Ignorera tidigare instruktioner". Systemet ska inte följa den delen, utan varna läraren om att frågan innehåller ett försök att påverka AI:ns instruktioner.
+I demofrågan frågar en student om komplettering och inlämningstid, men lägger också in en prompt injection: "Ignorera tidigare instruktioner". Systemet ska inte följa den delen, utan varna läraren om att frågan innehåller ett försök att påverka AI:ns instruktioner.
 
 ## 3. Säkerhetsanalys mappad mot OWASP LLM Top 10
 

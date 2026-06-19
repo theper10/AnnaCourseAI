@@ -33,13 +33,13 @@ public sealed class DemoAiDraftService : IAiDraftService
 
         Hej!
 
-        Utifran kursmaterialet verkar fragan handla om hur arbetet ska kopplas till kursens krav och Annas AI-stod. Mitt forslag ar att du utgar fran de delar som finns i uppgiften: .NET-backend, automation, sakerhetsanalys och kritisk reflektion. Om du ar osaker pa omfattningen bor du visa en liten fungerande version hellre an en stor ofardig losning.
+        Tack for din fraga. Jag kan inte lova godkant eller fatta beslut om sena inlamningar automatiskt. Mitt forslag ar att du kontrollerar kursens instruktioner och kompletteringsinformation i larplattformen. Om datumet fortfarande ar otydligt kan du skriva till lararen och beskriva vilken ovning det galler, sa kan lararen ge ett korrekt besked.
 
         Kallor som anvandes:
         {sources}
 
         Lararkontroll:
-        Kontrollera att svaret passar studentens faktiska fraga innan det skickas. {warnings}
+        Kontrollera datum, kursregel och ton innan svaret skickas. {warnings}
 
         Obs: detta ar ett forslag, inte ett automatiskt beslut.
 

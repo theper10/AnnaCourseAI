@@ -72,21 +72,51 @@ public sealed partial class RagSearchService(ICourseRepository repository)
             .DefaultIfEmpty(0)
             .Min();
 
-        var start = Math.Max(0, firstHit - 80);
+        var start = FindSnippetStart(normalized, Math.Max(0, firstHit - 80));
         var length = Math.Min(260, normalized.Length - start);
+        length = FindSnippetLength(normalized, start, length);
         var snippet = normalized.Substring(start, length).Trim();
 
-        if (start > 0)
-        {
-            snippet = "..." + snippet;
-        }
-
-        if (start + length < normalized.Length)
-        {
-            snippet += "...";
-        }
-
         return snippet;
+    }
+
+    private static int FindSnippetStart(string text, int preferredStart)
+    {
+        if (preferredStart <= 0)
+        {
+            return 0;
+        }
+
+        var previousSentence = text.LastIndexOfAny(['.', '!', '?'], preferredStart);
+        if (previousSentence >= 0 && preferredStart - previousSentence < 120)
+        {
+            return Math.Min(text.Length, previousSentence + 1);
+        }
+
+        var previousSpace = text.IndexOf(' ', preferredStart);
+        return previousSpace >= 0
+            ? Math.Min(text.Length, previousSpace + 1)
+            : preferredStart;
+    }
+
+    private static int FindSnippetLength(string text, int start, int maxLength)
+    {
+        var end = Math.Min(text.Length, start + maxLength);
+        if (end >= text.Length)
+        {
+            return text.Length - start;
+        }
+
+        var lastSentence = text.LastIndexOfAny(['.', '!', '?'], end - 1, end - start);
+        if (lastSentence > start && end - lastSentence < 100)
+        {
+            return lastSentence - start + 1;
+        }
+
+        var lastSpace = text.LastIndexOf(' ', end - 1, end - start);
+        return lastSpace > start
+            ? lastSpace - start
+            : maxLength;
     }
 
     [GeneratedRegex(@"[\p{L}\p{N}]+", RegexOptions.Compiled)]
