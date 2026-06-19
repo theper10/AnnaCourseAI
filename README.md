@@ -10,7 +10,7 @@ Lösningen följer beslutsunderlaget: den använder ett enkelt RAG-upplägg, mar
 - `automation/n8n-anna-course-ai.workflow.json` - n8n-export för automationen.
 - `automation/run-demo-automation.ps1` - körbar demoautomation utan n8n.
 - `automation/student-question-demo.json` - exempel på inkommande studentfråga.
-- `docs/Inlamning-2-Theodore-Perlman.pdf` - säkerhetsanalys och kritisk reflektion.
+- `docs/Inlamning-2-Sakerhetsanalys-Reflektion-Theodore-Perlman.pdf` - säkerhetsanalys och kritisk reflektion.
 
 ## Krav
 
