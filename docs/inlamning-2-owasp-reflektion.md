@@ -4,7 +4,7 @@
 **Kurs:** Systemutveckling och testning med AI-verktyg (SYS25D)  
 **Case:** AI-stöd för kursmaterial, feedback och studentfrågor  
 **Lösning:** AnnaCourseAI  
-**Datum:** 2026-06-19
+**Kodrepo:** https://github.com/theper10/AnnaCourseAI
 
 ## 1. Kort beskrivning av lösningen
 
@@ -63,7 +63,7 @@ I demofrågan finns en prompt injection: "Ignorera tidigare instruktioner". Syst
 
 ## 3. Säkerhetsanalys mappad mot OWASP LLM Top 10
 
-Jag har mappat lösningen mot **OWASP Top 10 for LLM and GenAI Applications 2025** från OWASP GenAI Security Project. Källa: https://genai.owasp.org/llm-top-10/ (hämtad 2026-06-19).
+Jag har mappat lösningen mot **OWASP Top 10 for LLM and GenAI Applications 2025** från OWASP GenAI Security Project. Källa: https://genai.owasp.org/llm-top-10/.
 
 Skalan jag använder:
 

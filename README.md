@@ -25,6 +25,14 @@ Testa att API:t svarar:
 Invoke-RestMethod http://localhost:5088/api/health
 ```
 
+## Snabbaste sättet att testa allt
+
+Det här scriptet startar backend, väntar tills den är redo, kör demoautomationen och stänger sedan backend igen:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run-local-demo.ps1
+```
+
 ## Kör demoautomation
 
 Starta backend enligt ovan. Kör sedan:
